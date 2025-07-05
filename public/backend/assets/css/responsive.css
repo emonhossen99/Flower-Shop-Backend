@@ -1,0 +1,100 @@
+@media (min-width: 320px) and (max-width: 560px) {
+    .suggestions {
+        width: 210px !important;
+    }
+    .invoice-box table tr.item td:first-child input {
+        width: 150px !important;
+    }
+    .purchas-invoice-show{
+        flex-direction: column;
+    }
+    .invoice-box {
+        border: none !important;
+    }
+    .dropdown-menu.show {
+        right: -325% !important;
+    }
+    #smail-device .dropdown-menu.show {
+        right: -200% !important;
+        top: 100% !important;
+    }
+    #text-center{
+        text-align: center !important;
+    }
+    #hr-border {
+        background: #ededed;
+        height: 2px;
+        width: 100%;
+        display: block;
+        margin: 10px 0px;
+    }
+    .invoice-box input[type="number"] {
+        width: 70px !important;
+    }
+    #updated_btns{
+        display: block !important;
+    }
+    #updated_btn{
+        display: none;
+    }
+    #invoiceDataDiv{
+        order: 1;
+    }
+    #invoiceInfoDiv{
+        order: 2;
+    }
+    .suggestions {
+        width: 210px !important;
+        position: absolute;
+        top: 0;
+        z-index: 99999999999;
+    }
+  }
+@media (min-width: 561px) and (max-width: 768px) {
+    .suggestions {
+        width: 480px !important;
+    }
+    .invoice-box table tr.item td:first-child input {
+        width: 150px !important;
+    }
+    .purchas-invoice-show{
+        flex-direction: column;
+    }
+    .invoice-box {
+        border: none !important;
+    }
+    #text-center{
+        text-align: center !important;
+    }
+    #hr-border {
+        background: #ededed;
+        height: 2px;
+        width: 100%;
+        display: block;
+        margin: 10px 0px;
+    }
+    #updated_btns{
+        display: block !important;
+    }
+    #updated_btn{
+        display: none;
+    }
+    #invoiceDataDiv{
+        order: 1;
+    }
+    #invoiceInfoDiv{
+        order: 2;
+    }
+    .suggestions {
+        width: 210px !important;
+        position: absolute;
+        top: 0;
+        z-index: 99999999999;
+    }
+  }
+
+@media (max-width: 561px) {
+    .content {
+        padding:0 0 0 0 !important;
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "DatabaseReset",
+    "alias": "databasereset",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\DatabaseReset\\App\\Providers\\DatabaseResetServiceProvider"
+    ],
+    "files": []
+}

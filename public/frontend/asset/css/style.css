@@ -1,0 +1,577 @@
+:root {
+    --main-primary-background: #fff;
+    --main-transparent-background: rgba(23, 8, 8, 0.7);
+    --main-primary-color: #fb7e63;
+    --main-hover-color: #d85133;
+    --main-primary-section-background: #f4ebe9;
+    --main-paragraph-color: #6c6262;
+    --main-cta-section-background: #150000;
+    --main-primary-black-color: black;
+}
+
+a{
+    text-decoration: none;
+}
+body {
+    font-family: 'DM Sans', Arial, sans-serif;
+    background: var(--main-primary-background);
+    color: #3a2c23;
+}
+
+/* Common Design Start  */
+
+.common-btn-flower {
+    background: var(--main-primary-color);
+    color: var(--main-primary-background);
+    border-radius: 4px;
+    padding: 10px 28px;
+    border: none;
+    transition: background 0.2s;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.common-btn-flower:hover {
+    background: var(--main-hover-color);
+    color: var(--main-primary-background);
+}
+
+.common-short-title {
+    color: var(--main-paragraph-color);
+    font-weight: 500;
+}
+
+.common-title {
+    color: var(--main-primary-color);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#flower-shop .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    line-height: 3.5rem;
+}
+
+#flower-shop .product-card {
+    border: none;
+    border-radius: 14px;
+}
+
+#flower-shop .product-card .product-card-image {
+    max-height: 420px;
+    position: relative;
+    cursor: pointer;
+}
+
+#flower-shop .product-card .product-card-image:hover~.badge-second,
+#flower-shop .product-card .product-card-image:hover .badge-second {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+#flower-shop .product-card .badge-first {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    background: var(--main-primary-background);
+    padding: 12px 35px;
+    color: var(--main-paragraph-color);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    width: 50px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#flower-shop .product-card .badge-second {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    background: var(--main-primary-background);
+    padding: 10px 20px;
+    color: var(--main-paragraph-color);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+#flower-shop .product-card-body {
+    text-align: center;
+    padding: 20px 0px;
+}
+
+#flower-shop .product-card-body .category-title {
+    color: var(--main-paragraph-color);
+}
+
+#flower-shop .product-card-body .card-title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    color: var(--main-primary-black-color);
+}
+
+#flower-shop .product-card-body .card-text {
+    font-size: 0.97rem;
+    color: var(--main-paragraph-color);
+    margin-bottom: 0.2rem;
+}
+
+#flower-shop .product-card-body .price-section {
+    color: var(--main-primary-color);
+    font-size: 1.08rem;
+    font-weight: 600;
+}
+
+#flower-shop .product-card-body .price-section {
+    color: var(--main-primary-color);
+    font-size: 1.08rem;
+    font-weight: 600;
+}
+
+#flower-shop .product-card-body .price-section .discount-price {
+    color: var(--main-paragraph-color);
+    margin-right: 5px;
+    font-size: 1rem;
+}
+#flower-shop .border-bottom {
+    border-bottom: var(--main-primary-color);
+}
+#flower-shop .owl-carousel {
+	position: unset !important;
+}
+
+#flower-shop .owl-prev {
+	position: absolute;
+	top: 0;
+	right: 5% !important;
+	background: var(--main-primary-color);
+    color: var(--main-primary-background);
+	border-radius: 4px !important;
+	font-size: 35px;
+	justify-content: center;
+	align-items: center;
+}
+
+#flower-shop .owl-prev {
+	position: absolute;
+	top: 0;
+	right: 4% !important;
+	background: var(--main-primary-color);
+    color: var(--main-primary-background);
+	border-radius: 4px !important;
+	font-size: 35px;
+	justify-content: center;
+	align-items: center;
+}
+
+#flower-shop .owl-next {
+	position: absolute;
+	top: 0;
+	background: var(--main-primary-color);
+    color: var(--main-primary-background);
+	border-radius: 4px !important;
+	font-size: 35px;
+	justify-content: center;
+	align-items: center;
+}
+
+#flower-shop .owl-simple .owl-nav .owl-prev {
+	left: unset !important;
+}
+#flower-shop .owl-simple .owl-nav .owl-next {
+	right: 0% !important;
+}
+/* Common Design End  */
+
+
+
+
+/* Navbar and Hero Section CSS Start  */
+#flower-shop .mastheader {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: transparent;
+}
+#flower-shop .mastheader .navbar-toggler {
+	border: var(--bs-border-width) solid var(--main-primary-color) !important;
+	border-radius: unset;
+}
+#flower-shop .mastheader .navbar-toggler:focus {
+	box-shadow: unset !important;
+}
+#flower-shop .mastheader .navbar-toggler #navbar-collapse-btn{
+	color : var(--main-primary-color) !important;
+}
+#flower-shop .mastheader .navbar-toggler #navbar-collapse-btn.cross-icon {
+	font-size: 20px;
+	padding: 0px 0px 0px 3px;
+}
+#flower-shop .mastfixedbgheader{
+	background: var(--main-primary-background) !important;
+}
+
+#flower-shop .navbar-brand,
+#flower-shop .nav-link {
+    color: var(--main-primary-background);
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+#flower-shop .mastfixedbgheader .navbar-brand,
+#flower-shop .mastfixedbgheader .nav-link {
+    color: var(--main-primary-black-color) !important;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+#flower-shop #mastheader .cart-section a i {
+    font-size: 20px;
+    color: var(--main-primary-color);
+}
+
+#flower-shop #mastheader .cart-section span {
+    position: absolute;
+    top: -20px;
+    right: -9px;
+    background: var(--main-primary-color);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+
+
+#flower-shop .nav-link.active {
+    color: var(--main-primary-color) !important;
+}
+
+#flower-shop .hero-section-overlay {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+#flower-shop .hero-section {
+    background: var(--main-transparent-background);
+    color: var(--main-primary-background);
+    min-height: 660px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#flower-shop .hero-section .hero-overlay {
+    padding: 70px 30px 60px 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+#flower-shop .hero-section .hero-overlay .main-title {
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+}
+
+#flower-shop .hero-section .hero-overlay .title {
+    font-size: 14px;
+}
+
+/* Navbar and Hero Section CSS End  */
+
+
+/* Features Section CSS Start  */
+#features-section {
+    background: var(--main-primary-section-background);
+}
+
+#features-section .features-section-wapper {
+    padding: 40px 0px;
+}
+
+#features-section .feature-card {
+    padding: 0px 20px;
+    border-left: 1px solid var(--main-primary-color);
+}
+
+#features-section .feature-card span {
+    font-size: 13px;
+    color: var(--main-primary-color);
+    font-weight: 600;
+}
+
+#features-section .feature-card h5 {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 12px;
+}
+
+/* Features Section CSS Start  */
+
+
+/* Special Moments CSS Start  */
+#special-moments-section {
+    padding: 50px 0px;
+}
+
+#special-moments-section .special-img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.06);
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 180px 180px 10px 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#special-moments-section .special-img-first {
+    height: 400px;
+    max-width: 270px;
+}
+
+#special-moments-section .special-img-second {
+    height: 480px;
+}
+
+#special-moments-section .main-title {
+    font-size: 2.5rem;
+    line-height: 3.4rem;
+    margin-top: 18px;
+    margin-bottom: 19px;
+}
+
+
+
+/* Special Moments CSS End  */
+
+/* Latest Additions CSS Start  */
+#latest-additions-section {
+    padding: 60px 0px;
+    background: var(--main-primary-section-background);
+}
+
+/* Latest Additions CSS End  */
+
+
+
+/* CTA Section CSS Start  */
+#cta-section .cta-section {
+    background: var(--main-cta-section-background);
+    color: var(--main-primary-background);
+    padding: 100px 0px 0px 0px;
+    text-align: left;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+#cta-section .cta-section img {
+    border-radius: 300px 300px 0px 0px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+#cta-section .cta-section .cta-section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 3.5rem;
+}
+
+/* CTA Section CSS End  */
+
+/* Top-Selling Flowers Section CSS End  */
+#top-selling-flowers-section {
+    padding: 60px 0px;
+    background: var(--main-primary-section-background);
+}
+/* Top-Selling Flowers Section CSS End  */
+
+/* Testimonials Section CSS End  */
+#testimonials-section {
+    padding: 60px 0px;
+}
+#testimonials-section .star-rating {
+    color: #f6b93b;
+}
+#testimonials-section .testimonial-card {
+    background: #fff;
+    border: none;
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+    padding: 24px 18px 18px 18px;
+    margin-bottom: 20px;
+    text-align: center;
+    min-height: 220px;
+}
+#testimonials-section .testimonial-card .client-review {
+    color: var(--main-paragraph-color);
+}
+#testimonials-section .testimonial-card  .testimonial-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+#testimonials-section .testimonial-card  .client-info .name{
+	font-size: 17px;
+	text-align: start;
+	font-weight: 500;
+}
+#testimonials-section .testimonial-card  .client-info .designation{
+	font-size: 14px;
+	text-align: start;
+    color: var(--main-paragraph-color);
+}
+
+/* Testimonials Section CSS End  */
+
+
+/* Final CTA Section CSS Start  */
+#final-cta-section .cta-section {
+    background: var(--main-cta-section-background);
+    color: var(--main-primary-background);
+    padding: 100px 0px 0px 0px;
+    text-align: left;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+#final-cta-section .cta-section img {
+    border-radius: 300px 300px 0px 0px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+#final-cta-section .cta-section .cta-section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 3.5rem;
+}
+
+/* Final CTA Section CSS End  */
+
+/* Footer Section CSS End  */
+#footer{
+    background: var(--main-primary-section-background);
+    padding: 32px 0 18px 0;
+}
+#footer .footer-wapper{
+    padding: 50px 0px;
+}
+#footer .footer-wapper .footer-title {
+	color: var(--main-primary-black-color);
+	font-size: 23px;
+}
+#footer .footer-wapper .copyright-title {
+	color: var(--main-paragraph-color);
+}
+#footer .footer-wapper .footer-link, #footer .footer-wapper .footer-contact{
+	color: var(--main-paragraph-color);
+}
+#footer .footer-wapper a {
+    display: block;
+    text-decoration: none;
+}
+#footer .footer-social-icons i{
+	margin-left: 12px;
+}
+#footer .footer-social-icons i:hover{
+	color: var(--main-hover-color) !important;
+}
+#footer .footer-social-icons #facebook{
+	color: #1877F2;
+}
+#footer .footer-social-icons #twitter{
+	color: #1877F2;
+}
+#footer .footer-social-icons #instagram{
+	color: #FD1D1D;
+}
+#footer .footer-social-icons #youtube{
+	color: #FF0000;
+}
+/* Footer Section CSS End  */
+
+
+/* Carousel Common CSS Start  */
+
+
+#flower-shop .owl-dot span {
+    height: 12px !important;
+}
+
+#flower-shop .owl-dot.active span {
+    border-color: #04192c !important;
+    background: #04192c !important;
+}
+
+#flower-shop .owl-dot span {
+    border-color: #cccccc !important;
+    background: #cccccc !important;
+}
+
+#flower-shop .owl-dot span {
+    width: 30px !important;
+}
+
+#flower-shop .owl-simple .owl-dots .owl-dot span {
+	border-radius: 0px !important;
+}
+
+/* Carousel Common CSS End  */
+
+
+/* Back To Top CSS Start  */
+
+#backToTopBtn {
+	display: none;
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background-color: var( --main-primary-color);
+	color: var(--main-primary-background);
+	cursor: pointer;
+	padding: 4px 10px;
+	border-radius: 2px;
+	opacity: 0.7;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+#backToTopBtn:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+/* Back To Top CSS End  */
+
+

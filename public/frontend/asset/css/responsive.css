@@ -1,0 +1,124 @@
+@media (min-width: 1200px) {
+    #flower-shop .section-title {
+        padding: 0px 200px;
+    }
+}
+
+@media (max-width: 992px) {
+    #flower-shop .cart-section {
+        display: none;
+    }
+    #flower-shop .mastheader #navbarNav .navbar-nav {
+        background : var(--main-primary-background) !important;
+    }
+    #flower-shop .mastheader #navbarNav .navbar-nav .nav-link {
+        color: var(--main-primary-black-color);
+    }
+}
+
+@media (max-width: 768px) {
+    #features-section .feature-card {
+        margin-bottom: 2rem;
+    }
+    #special-moments-section .main-title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    #special-moments-section #special-moments-first-image{
+        order: 2;
+    }
+    #special-moments-section #special-moments-second-image{
+        order: 1;
+    }
+    #special-moments-section #special-moments-last-image{
+        order: 3;
+    }
+    #flower-shop .section-title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    #cta-section .cta-section .cta-section-title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    #cta-section .cta-section .common-btn-flower {
+        margin-bottom: 5rem;
+    }
+
+    #final-cta-section .cta-section .cta-section-title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    #final-cta-section .cta-section  .common-btn-flower {
+        margin-bottom: 5rem;
+    }
+    #navbarNav {
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0%;
+    }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+    #flower-shop .owl-prev {
+        right: 8% !important;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    #special-moments-section .special-img-first {
+        height: 320px;
+    }
+    #special-moments-section .special-img-second {
+        height: 400px;
+    }
+    #flower-shop .owl-prev {
+        right: 10% !important;
+    }
+}
+
+@media (max-width: 576px) {
+    #flower-shop .hero-section .hero-overlay {
+        padding: 120px 10px 60px 10px;
+    }
+    #flower-shop .hero-section .hero-overlay .main-title {
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
+    #special-moments-section .special-img-first {
+        height: 200px;
+    }
+    #special-moments-section .special-img-second {
+        height: 280px;
+    }
+    #footer .footer-wapper {
+        text-align: center;
+    }
+}
+@media (min-width: 380px) and (max-width: 576px){
+    #special-moments-section .special-img-first {
+        height: 320px;
+    }
+    #special-moments-section .special-img-second {
+        height: 400px;
+    }
+    #flower-shop .owl-prev {
+        right: 14% !important;
+    }
+}
+
+@media (max-width: 380px){
+    #cta-section .cta-section img {
+        height: 400px;
+        border-radius: 180px 180px 10px 10px;
+        object-fit: cover;
+    }
+    #final-cta-section .cta-section img {
+        height: 400px;
+        border-radius: 180px 180px 10px 10px;
+        object-fit: cover;
+    }
+    #flower-shop .owl-prev {
+        right: 16% !important;
+    }
+}

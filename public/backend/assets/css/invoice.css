@@ -1,0 +1,196 @@
+
+.invoice-box {
+  border: 1px solid #eee;
+}
+.invoice-box {
+  width: auto;
+ }
+.invoice-box table {
+  width: 100%;
+  line-height: inherit;
+  text-align: left;
+}
+
+.invoice-box table td, .invoice-box table th{
+	padding: 7px 15px;
+	font-size: 16px;
+}
+
+.invoice-box table tr td:nth-child(n+2) {
+  text-align: right;
+}
+.invoice-box .suggestion-item {
+  text-align: left;
+}
+.invoice-box table tr.top table td {
+  padding-bottom: 20px;
+}
+
+.invoice-box table tr.top table td.title {
+  font-size: 30px;
+  line-height: 45px;
+  color: #333;
+}
+
+.invoice-box table tr.information table td {
+  padding-bottom: 40px;
+}
+
+.invoice-box table tr.heading td {
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+}
+
+.invoice-box table tr.details td {
+  padding-bottom: 20px;
+}
+
+.invoice-box table tr.item td{
+  border-bottom: 1px solid #eee;
+}
+
+.invoice-box table tr.item.last td {
+  border-bottom: none;
+}
+
+.invoice-box table tr.item input {
+	padding: 5px;
+}
+
+.invoice-box table tr.item td:first-child input {
+  margin-left: -5px;
+  width: 100%;
+}
+
+.invoice-box table tr.total td:nth-child(2) {
+  font-weight: bold;
+}
+
+.invoice-box input[type="number"] {
+	width: 120px;
+}
+
+.showcustomerdata {
+	position: absolute;
+	background: #518be1;
+	z-index: 99;
+	padding: 8px 15px 0px 25px !important;
+	/* top: 5px; */
+	margin-top: 5px;
+	border-radius: 4px;
+	color: white;
+}
+.showcustomerdata ul li {
+	list-style: none;
+	line-height: 28px;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .invoice-box table tr.top table td {
+      width: 100%;
+      display: block;
+      text-align: center;
+  }
+  
+  .invoice-box table tr.information table td {
+      width: 100%;
+      display: block;
+      text-align: center;
+  }
+}
+
+/** RTL **/
+.rtl {
+  direction: rtl;
+  font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+}
+
+.rtl table {
+  text-align: right;
+}
+
+.rtl table tr td:nth-child(2) {
+  text-align: left;
+}
+
+.inputStyle{
+  text-align: center;
+  width: 105px;
+  border: none;
+  outline: none;
+}
+.suggestions {
+	width: 450px;
+	max-height: 200px;
+	background: white;
+	border-radius: 4px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0);
+	overflow-y: auto;
+	background: #e3e3e3;
+  z-index: 99999;
+}
+
+.suggestions ul {
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+
+.suggestions ul li{
+  padding: 5;
+  margin: 0;
+}
+
+.suggestions li {
+	font-size: 14px;
+	color: #333;
+	padding: 0px 6px;
+	transition: 0.3s ease;
+	cursor: pointer;
+	list-style: none;
+}
+
+.suggestions li:hover {
+	background: #fff;
+}
+
+.item td input {
+	width: 350px;
+	border: none;
+	background-color: aliceblue;
+	font-size: 16px;
+	outline: none;
+}
+
+
+.container td {
+  font-size: 12px; /* ছোট ফন্ট */
+  line-height: 16px;
+  padding: 5px;
+}
+
+.container label {
+  font-weight: bold;
+  font-size: 10px;
+  display: block;
+  margin-top: 5px;
+}
+
+.container input {
+  font-size: 10px;
+  padding: 3px;
+  width: 200px; /* ইনপুট বক্সের আকার ছোট */
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+}
+.mb-2 {
+  margin-bottom: .5rem !important;
+  padding: 4;
+}
+.text-end {
+  text-align: right !important;
+  outline: none;
+  border: none;
+}

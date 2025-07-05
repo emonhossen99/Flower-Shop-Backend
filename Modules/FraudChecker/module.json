@@ -1,0 +1,11 @@
+{
+    "name": "FraudChecker",
+    "alias": "fraudchecker",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\FraudChecker\\App\\Providers\\FraudCheckerServiceProvider"
+    ],
+    "files": []
+}

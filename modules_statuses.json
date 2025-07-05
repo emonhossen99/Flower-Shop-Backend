@@ -1,0 +1,17 @@
+{
+    "Product": true,
+    "Category": true,
+    "Order": true,
+    "Feature": true,
+    "Image": true,
+    "ImageGallery": true,
+    "Menu": true,
+    "Setting": true,
+    "Page": true,
+    "FraudChecker": true,
+    "ProductTag": true,
+    "DatabaseReset": true,
+    "Language": true,
+    "EmailTemplate": true,
+    "Testimonail": true
+}

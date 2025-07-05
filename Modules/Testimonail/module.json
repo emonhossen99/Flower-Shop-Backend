@@ -1,0 +1,11 @@
+{
+    "name": "Testimonail",
+    "alias": "testimonail",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Testimonail\\App\\Providers\\TestimonailServiceProvider"
+    ],
+    "files": []
+}
