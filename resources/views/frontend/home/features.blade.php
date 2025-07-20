@@ -1,4 +1,5 @@
 <!-- Features -->
+@if (isset($features) && count($features) > 0)
 <section id="features-section">
     <div class="container py-4">
         <div class="features-section-wapper">
@@ -17,4 +18,5 @@
         </div>
     </div>
 </section>
+@endif
 

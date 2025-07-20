@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
-use Modules\Category\App\Models\Category;
 use Modules\Feature\App\Models\Feature;
 use Modules\Product\App\Models\Product;
+use Modules\Category\App\Models\Category;
 use Modules\Subscriber\App\Models\Subscriber;
 use Modules\Testimonail\App\Models\Testimonail;
 

@@ -43,9 +43,11 @@
                                 </div>
                                 <div class="price-section">
                                     @if($product?->discount_price != null)
-                                       <del class="discount-price">{{ currency() ?? '$' }}{{ $product?->discount_price ?? '' }}</del> 
+                                       <del class="discount-price">{{ currency() ?? '$' }}{{ $product?->price ?? '' }}</del> 
+                                       {{ currency() ?? '$' }}{{ $product?->discount_price ?? '' }}
+                                    @else 
+                                        {{ currency() ?? '$' }}{{ $product?->price ?? 0.00 }}
                                     @endif
-                                   {{ currency() ?? '$' }}{{ $product?->price ?? 0.00 }}
                                 </div>
                             </div>
                         </div>
