@@ -1,5 +1,6 @@
 {
     "Product": true,
+    "Coupon" :true,
     "Category": true,
     "Order": true,
     "Feature": true,

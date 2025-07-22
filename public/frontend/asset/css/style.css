@@ -57,14 +57,18 @@ body {
 }
 
 #flower-shop .product-card {
-    border: none;
-    border-radius: 14px;
+	border-radius: 5px;
+	border: 1px solid var(--main-primary-color);
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 #flower-shop .product-card .product-card-image {
     max-height: 420px;
     position: relative;
     cursor: pointer;
+}
+#flower-shop .product-card .product-card-image img{
+    border-radius: 5px;
 }
 
 #flower-shop .product-card .product-card-image:hover~.badge-second,
@@ -259,9 +263,6 @@ body {
     font-weight: 600;
 }
 
-
-
-
 #flower-shop .nav-link.active {
     color: var(--main-primary-color) !important;
 }
@@ -302,6 +303,13 @@ body {
 
 /* Navbar and Hero Section CSS End  */
 
+/* Breadcrumb CSS Start   */
+#flower-shop #main-breadcrumb{
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+/* Breadcrumb CSS End    */
 
 /* Features Section CSS Start  */
 #features-section {
@@ -543,6 +551,7 @@ body {
 
 #flower-shop .owl-simple .owl-dots .owl-dot span {
 	border-radius: 0px !important;
+    margin-top: 20px !important;
 }
 
 /* Carousel Common CSS End  */

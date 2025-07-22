@@ -15,6 +15,7 @@ class MainIndexController extends Controller
 {
     public function index()
     {
+        Cache::forget('all_products');
         $this->setPageTitle('Home');
         $data['mode']                 = config('settings.commingsoonmode') ?? 0;
         $category_sections             = json_decode(config('settings.bestselling_category_section'));
@@ -22,7 +23,7 @@ class MainIndexController extends Controller
             return Feature::where('status', '1')->orderBy('id', 'desc')->take(4)->get();
         });
         $data['products']             =  Cache::remember('all_products', 60 * 60, function () {
-            return Product::with(['categories', 'images'])->where('status', '1')->orderBy('id', 'desc')->take(6)->get();
+            return Product::with(['categories', 'images'])->where('status', '1')->orderBy('id', 'desc')->take(8)->get();
         });
 
         if ($category_sections != null &&  collect($category_sections)->count() > 0) {
@@ -38,7 +39,7 @@ class MainIndexController extends Controller
             });
         }
 
-        $data['testimonails']             =  Cache::remember('all_testimonail', 60 * 60, function () {
+        $data['testimonails'] =  Cache::remember('all_testimonail', 60 * 60, function () {
             return Testimonail::where('status', '1')->orderBy('id', 'desc')->take(3)->get();
         });
 

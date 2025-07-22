@@ -5,12 +5,12 @@ namespace Modules\Setting\App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Cache;
 use Modules\Product\App\Models\Product;
 use Modules\Setting\App\Models\Setting;
 use Modules\Category\App\Models\Category;
 use Modules\Setting\App\Http\Requests\CategoryProductRequest;
 use Modules\Setting\App\Http\Requests\TopSellingProductRequest;
-use Illuminate\Support\Facades\Cache;
 
 class SettingController extends Controller
 {
@@ -269,6 +269,9 @@ class SettingController extends Controller
             if ($request->ajax()) {
                 Setting::updateOrCreate(['option_key' => 'category_product'], ['option_value' => json_encode($request->category_product)]);
                 Setting::updateOrCreate(['option_key' => 'category_section'], ['option_value' => json_encode($request->category_section)]);
+                Cache::forget('app_settings');
+                Cache::forget('dynamic_products');
+                Cache::forget('dynamic_products_with_category');
                 return response()->json([
                     'status'  => 'success',
                     'message' => 'Section setting update successfully !',
@@ -278,43 +281,6 @@ class SettingController extends Controller
             abort(401);
         }
     }
-
-    public function cartPageStore(Request $request)
-    {
-        if (Gate::allows('isAdmin')) {
-            if ($request->ajax()) {
-                Setting::updateOrCreate(['option_key' => 'cartpagetitle'], ['option_value' => $request->cartpagetitle]);
-                Setting::updateOrCreate(['option_key' => 'cartpagewarningtext'], ['option_value' => $request->cartpagewarningtext]);
-                return response()->json([
-                    'status'  => 'success',
-                    'message' => __f('Cart Page Update Success Message'),
-                ]);
-            }
-        } else {
-            abort(401);
-        }
-    }
-
-
-
-
-
-    public function topSellingProduct(TopSellingProductRequest $request)
-    {
-        if (Gate::allows('isAdmin')) {
-            if ($request->ajax()) {
-
-                Setting::updateOrCreate(['option_key' => 'topsellingproducts'], ['option_value' => json_encode($request->topsellingproducts)]);
-                return response()->json([
-                    'status'  => 'success',
-                    'message' => 'Top selling products setting update successfully !',
-                ]);
-            }
-        } else {
-            abort(401);
-        }
-    }
-
 
 
     /**

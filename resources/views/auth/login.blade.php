@@ -1,166 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.frontend')
+@section('title', $title)
+@section('content')
+<div class="container">
+    <div class="login-page-three-template">
+        <div class="row g-5 justify-content-center align-items-center">
+            <div class="col-md-7 mb-3 mt-3">
+                <div class="login-card-three">
+                    <img src="{{ asset(config('settings.login_page_three_right_image') ?? 'backend/assets/loginpage/defaultrightimage.jpg') }}" alt="image">
+                </div>
+            </div>
+            <div class="col-md-5 mb-3 mt-3">
+                <div class="login-card-three">
+                    <div class="card-body-three">
+                        <div class="heading mb-1">
+                            <h2 class="text-center">{{ config('settings.logintitle') ?? '' }}</h2>
+                        </div>
+                        <div>
+                            <form method="POST" action="{{ route('login') }}">
+                                @csrf
+                                <div class="row mb-2">
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="user-email"><i
+                                                class="fa-solid fa-user"></i></span>
+                                        <input type="email" name="email" class="form-control"
+                                            placeholder="Enter Your Email" aria-label="user-email"
+                                            aria-describedby="user-email">
+                                    </div>
+                                    @error('email')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="user-password"><i
+                                                class="fa-solid fa-unlock-keyhole"></i></span>
+                                        <input type="password" name="password" class="form-control"
+                                            placeholder="Enter Your Password" aria-label="user-password"
+                                            aria-describedby="user-password">
+                                    </div>
+                                    @error('password')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
+                                </div>
+                                <div class="row">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <a class="create-account-three px-0" href="{{ route('user.register') }}">
+                                            {{ __('Create Account') }}
+                                        </a>
+                                        <a class="forget-password-three px-0" href="{{ route('forgot.password') }}">
+                                            {{ __('Forgot Your Password?') }}
+                                        </a>
+                                    </div>
+                                </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>@yield('title') - {{ env('APP_NAME') }}</title>
-    <meta name="title" content="@yield('metatitle')">
-    <meta name="keywords" content="@yield('metakeywords')">
-    <meta name="description" content="@yield('metadescription')">
-    <meta name="author" content="p-themes">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset(config('settings.favicon_first') ?? '') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset(config('settings.favicon_second') ?? '') }}">
-
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts (optional, for DM Sans) -->
-    <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <link rel="stylesheet" href="{{ asset('frontend/asset/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/asset/css/responsive.css') }}">
-    <link rel="stylesheet" href="{{ route('dynamic.style') }}">
-    <style>
-        .required::after {
-            content: '*';
-            color: red;
-        }
-
-        .toast-success {
-            background-color: #51A351;
-        }
-
-        .toast-error {
-            background-color: #BD362F;
-        }
-
-        .toast-info {
-            background-color: #2F96B4;
-        }
-
-        .toast-warning {
-            background-color: #F89406;
-        }
-
-        #main-page-loader {
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            z-index: 9999;
-            background-color: #fff;
-        }
-
-        #page-loader {
-            border: 5px solid rgba(217, 217, 217, 0.5);
-            border-radius: 50%;
-            border-top: 5px solid #01bf66;
-            width: 55px;
-            height: 55px;
-            position: absolute;
-            left: 50%;
-            right: 0;
-            top: 50%;
-            margin-left: -60px;
-            margin-top: -60px;
-            bottom: 0;
-            -webkit-animation: spin 2s linear infinite;
-            -o-animation: spin 2s linear infinite;
-            animation: spin 2s linear infinite;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
-</head>
-
-<body>
-    {{-- <div id="main-page-loader">
-        <div id="page-loader"></div>
-    </div> --}}
-    <div class="page-wrapper">
-        <main class="main d-flex justify-content-center align-items-center">
-            @include('auth.logins.login-one')
-        </main>
+                                <div class="row mb-0">
+                                    <div class="col-md-12">
+                                        <button type="submit"
+                                            class="loginpagecommonbtn text-white btn w-100 fw-bold fs-2">
+                                            {{ __('Login') }}
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <!-- Toastr JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script>
-        function flashMessage(status, message) {
-            toastr.options = {
-                "closeButton": true,
-                "debug": false,
-                "newestOnTop": false,
-                "progressBar": true,
-                "positionClass": "toast-top-right",
-                "preventDuplicates": false,
-                "onclick": null,
-                "showDuration": "300",
-                "hideDuration": "1000",
-                "timeOut": "5000",
-                "extendedTimeOut": "1000",
-                "showEasing": "swing",
-                "hideEasing": "linear",
-                "showMethod": "fadeIn",
-                "hideMethod": "fadeOut"
-            }
-            switch (status) {
-                case 'success':
-                    toastr.success(message);
-                    break;
-
-                case 'error':
-                    toastr.error(message);
-                    break;
-
-                case 'info':
-                    toastr.info(message);
-                    break;
-
-                case 'warning':
-                    toastr.warning(message);
-                    break;
-            }
-        }
-
-        @if (Session::get('success'))
-            flashMessage('success', "{{ Session::get('success') }}")
-        @elseif (Session::get('error'))
-            flashMessage('error', "{{ Session::get('error') }}")
-        @elseif (Session::get('info'))
-            flashMessage('info', "{{ Session::get('info') }}")
-        @elseif (Session::get('warning'))
-            flashMessage('warning', "{{ Session::get('warning') }}")
-        @endif
-    </script>
-    <script>
-        // document.onreadystatechange = function() {
-        //     var state = document.readyState;
-        //     if (state == "interactive") {
-        //         document.getElementById("mainbody").style.visibility = "hidden";
-        //     } else if (state == "complete") {
-        //         setTimeout(function() {
-        //             document.getElementById("interactive");
-        //             document.getElementById("main-page-loader").style.visibility = "hidden";
-        //             document.getElementById("mainbody").style.visibility = "visible";
-        //         }, 10);
-        //     }
-        // }
-    </script>
-</body>
-
-</html>
+</div>
+@endsection

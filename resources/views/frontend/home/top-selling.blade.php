@@ -2,23 +2,23 @@
 @if ($dynamicCategorySection && count($dynamicCategorySection) > 0)
     <section id="top-selling-flowers-section">
         <div class="container py-5">
-            <h6 class="common-title text-center mb-4">{{ config('settings.bestsellingsectiontitle') ?? 'BEST SELLING' }}
+            <h6 data-aos="fade-up" class="common-title text-center mb-4">{{ config('settings.bestsellingsectiontitle') ?? 'BEST SELLING' }}
             </h6>
-            <h2 class="section-title">
+            <h2 data-aos="fade-down" class="section-title">
                 {{ config('settings.bestsellingsectionsubtitle') ?? 'Blossom with the Best Our Top-Selling Flowers' }}
             </h2>
-            <p class="common-short-title text-center mb-5">
+            <p data-aos="fade-up" class="common-short-title text-center mb-5">
                 {{ config('settings.bestsellingsectiondescriptiontitle') ??
                     'Share some details here. This is Flexible section where you can share anything you want..' }}
             </p>
             @forelse ($dynamicCategorySection as $key => $dynamicCategory)
                 <div class="position-relative">
                     <div class="d-flex justify-content-between align-items-center border-bottom mb-3">
-                        <h4>{{ $dynamicCategory->name ?? '' }}</h4>
+                        <h4 data-aos="fade-right" data-aos-duration="1000">{{ $dynamicCategory->name ?? '' }}</h4>
                     </div>
                     <div class="owl-carousel owl-simple carousel-equal-height carousel-with-shadow owl-carousel-{{ $key }} mb-3">
                         @forelse ($dynamicCategory->products as $product)
-                            <div class="product-card">
+                            <div class="product-card" data-aos="fade-up" data-aos-duration="2000">
                                 <div class="product-card-image">
                                     @if ($product->product_image != null)
                                         <img src="{{ asset($product->product_image ?? '') }}" class="card-img-top"
@@ -45,9 +45,9 @@
                                     </div>
                                     <div class="price-section">
                                          @if($product?->discount_price != null)
-                                            <del class="discount-price">{{ currency() ?? '$' }}{{ $product?->price ?? '' }}</del> 
+                                            <del class="discount-price">{{ currency() ?? '$' }}{{ $product?->price ?? '' }}</del>
                                             {{ currency() ?? '$' }}{{ $product?->discount_price ?? '' }}
-                                        @else 
+                                        @else
                                             {{ currency() ?? '$' }}{{ $product?->price ?? 0.00 }}
                                         @endif
                                     </div>

@@ -2,7 +2,7 @@
     <div class="sidebar-content js-simplebar">
         <a class="sidebar-brand" href="{{ route('index') }}">
             <span class="align-middle"><img src="{{ asset(config('settings.company_secondary_logo')) }}"
-                    alt="Mamurjor Logo" width="105" height="25"></span>
+                    alt="Logo" width="105" height="25"></span>
         </a>
 
         <ul class="sidebar-nav">

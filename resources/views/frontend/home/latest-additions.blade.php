@@ -1,19 +1,19 @@
 <!-- Latest Additions -->
 <section id="latest-additions-section">
     <div class="container py-5">
-        <h6 class="common-title text-center mb-4">{{ config('settings.latestadditionssectiontitle') ?? 'NEW ARRIVAL' }}
+        <h6 data-aos="fade-up" class="common-title text-center mb-4">{{ config('settings.latestadditionssectiontitle') ?? 'NEW ARRIVAL' }}
         </h6>
-        <h2 class="section-title">
+        <h2 data-aos="fade-down" class="section-title">
             {{ config('settings.latestadditionssectionsubtitle') ??
                 'Discover the Latest Additions at Your Top Choice Flower Shop' }}
         </h2>
-        <p class="common-short-title text-center mb-5">
+        <p data-aos="fade-up" class="common-short-title text-center mb-5">
             {{ config('settings.latestadditionssectionbtntitle') ??
                 'Share some details here. This is Flexible section where you can share anything you want.' }}
         </p>
         <div class="row g-4">
-            @forelse ($products as $product)
-                <div class="col-md-3 col-12">
+            @forelse ($products as $key => $product)
+                <div class="col-md-3 col-12" data-aos="fade-up" data-aos-duration="2000">
                     <a href="{{ route('view.product',['id' => $product->id ?? 0]) }}">
                         <div class="product-card">
                             <div class="product-card-image">
@@ -43,9 +43,9 @@
                                 </div>
                                 <div class="price-section">
                                     @if($product?->discount_price != null)
-                                       <del class="discount-price">{{ currency() ?? '$' }}{{ $product?->price ?? '' }}</del> 
+                                       <del class="discount-price">{{ currency() ?? '$' }}{{ $product?->price ?? '' }}</del>
                                        {{ currency() ?? '$' }}{{ $product?->discount_price ?? '' }}
-                                    @else 
+                                    @else
                                         {{ currency() ?? '$' }}{{ $product?->price ?? 0.00 }}
                                     @endif
                                 </div>
